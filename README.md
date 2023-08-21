@@ -28,13 +28,13 @@ export const Testpage = () => {
             onClick={e => scrollToId("trafficJam", true)}
             style={{backgroundColor: "transparent", border: "2px white solid", borderRadius: "10px", color: "white", padding: "5px", cursor: "pointer", marginBottom: "5px"}}
           >
-            Look at the Traffic 👀
+            Look at the traffic 👀
           </button>
           <button 
             onClick={e => scrollToId("cars", true)}
             style={{backgroundColor: "transparent", border: "2px white solid", borderRadius: "10px", color: "white", padding: "5px", cursor: "pointer"}}
           >
-            Look at the red Cars 👀
+            Look at the red cars 👀
           </button>
         </div>
       </div>
@@ -45,7 +45,7 @@ export const Testpage = () => {
     return (
       <div id="trafficJam" style={{backgroundColor: "lightblue", height: "1500px", display: "flex", justifyContent: "center", paddingTop: "40px"}}>
         <div>
-          <p >Oh no, a traffic Jam!</p>
+          <p >Oh no, a traffic jam!</p>
           <p style={{textAlign: "center"}}> 🚕🚗🛺 </p>
           <p> 🛺🛺🛺 </p>
           <p id="cars" style={{textAlign: "right"}}> 🚗🚗🚗 </p>
