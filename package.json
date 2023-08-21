@@ -4,9 +4,6 @@
   "description": "This package is a component libray for a swipe-up header module, inspired by mobile systems and the windows login screen.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "publishConfig": {
-    "access": "restricted"
-  },
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w",

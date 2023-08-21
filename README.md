@@ -103,3 +103,14 @@ import {scrollToId} from "swiping-header"
 <button onClick={() => scrollToId("someId", true)} >Scroll to ID </button>
 <button onClick={() => scrollToId("someId")} >Scroll to ID instantly</button>
 ```
+
+### --scroll css variable
+
+As a sideeffect, the usage of the SwipingHeader component also injects a css variable "--scroll", which is a value between 0 and 1, referencing the percentage of the whole page that has been scrolled over so far. The variable can be used in css to trigger scroll animations or any other scroll dependant change.
+
+```
+.background {
+  transform: translateY(calc(var(--scroll) * 500px));
+  ...
+}
+```
