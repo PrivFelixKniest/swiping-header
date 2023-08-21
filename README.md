@@ -1,4 +1,7 @@
 # Swiping Header
+
+This npm package allows you to implement a "Swiping Header" inspired by the mobile tool bar at the top or the windows lock screen into your React appliactions with ease!
+
 ## Install
 
 ``` 
