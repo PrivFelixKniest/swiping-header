@@ -12,6 +12,9 @@ npm install swiping-header@latest
 
 ... to Install the latest version of the Swiping Header component library
 
+> npm repo: https://www.npmjs.com/package/swiping-header <br>
+> Github repo: https://github.com/PrivFelixKniest/swiping-header/edit/master
+
 ## Usage
 
 ### Example Project (Copy and paste)
