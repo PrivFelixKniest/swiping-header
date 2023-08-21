@@ -8,12 +8,66 @@ npm install swiping-header@latest
 ... to Install the latest version of the Swiping Header component library
 
 ## Usage
+
+### Example Project (Copy and paste)
+
+```
+import { SwipingHeader, scrollToId } from "swiping-header"
+
+export const Testpage = () => {
+
+  const renderHeader = () => {
+    return (
+      <div style={{backgroundColor: "#444488", height: "100%", display: "flex", justifyContent: "center"}}>
+        <div style={{display: "flex", flexDirection: "column", justifyContent: "center"}}>
+          <p style={{textAlign: "center"}}>Traffic Watcher</p>
+          <button 
+            onClick={e => scrollToId("trafficJam", true)}
+            style={{backgroundColor: "transparent", border: "2px white solid", borderRadius: "10px", color: "white", padding: "5px", cursor: "pointer", marginBottom: "5px"}}
+          >
+            Look at the Traffic 👀
+          </button>
+          <button 
+            onClick={e => scrollToId("cars", true)}
+            style={{backgroundColor: "transparent", border: "2px white solid", borderRadius: "10px", color: "white", padding: "5px", cursor: "pointer"}}
+          >
+            Look at the red Cars 👀
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  const renderBody = () => {
+    return (
+      <div id="trafficJam" style={{backgroundColor: "lightblue", height: "1500px", display: "flex", justifyContent: "center", paddingTop: "40px"}}>
+        <div>
+          <p >Oh no, a traffic Jam!</p>
+          <p style={{textAlign: "center"}}> 🚕🚗🛺 </p>
+          <p> 🛺🛺🛺 </p>
+          <p id="cars" style={{textAlign: "right"}}> 🚗🚗🚗 </p>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div style={{color: "white"}}>
+      <SwipingHeader 
+        bodycomponent={renderBody()} 
+        headercomponent={renderHeader()} 
+      />
+    </div>
+  )
+}
+```
+
 ### Swiping Header
 
 Import the ```<SwipingHeader />``` component and put it at the root of your page.
 
 ```
-import SwipingHeader from "..."
+import {SwipingHeader} from "swiping-header"
 
 const header = () =>{
   return <div />
@@ -25,9 +79,9 @@ const body = () =>{
 
 export const MyPage = () => {
   return (
-    <body> {/** make sure that this element has the whole page as its width and is `position: "static" or "relative"` */}
-      <SwipingHeader headercomponent={header} bodycomponent={body} />
-    </body>
+    <div> {/** make sure that this element has the whole page as its width and is `position: "static" or "relative"` */}
+      <SwipingHeader headercomponent={header()} bodycomponent={body()} />
+    </div>
   )
 }
 ```
@@ -38,35 +92,11 @@ Since the internal logic breaks the ```<a href="#someid">``` navigational system
 export const scrollToId = (elementId: string, smooth?: boolean) => {...}
 ```
 ```
+import {scrollToId} from "swiping-header"
+
 <a onClick={() => scrollToId("someId", true)} >Scroll to ID smoothly</a>
 <a onClick={() => scrollToId("someId")} >Scroll to ID instantly</a>
 
 <button onClick={() => scrollToId("someId", true)} >Scroll to ID </button>
 <button onClick={() => scrollToId("someId")} >Scroll to ID instantly</button>
-```
-
-## Content
-
-The Library contains a <SwipingHeader ... /> custom component that takes in a body and a header React component as its arguments:
-```
-export interface SwipingHeaderProps {
-  headercomponent: ReactNode;
-  bodycomponent: ReactNode;
-}
-```
-```
-<SwipingHeader 
-  headercomponent={<div>I am a Header Component</div>} 
-  bodycomponent={<div>I am a Body Component</div>}
-/>
-```
-<br>
-
-Since the internal logic breaks the ```<a href="#someid">``` navigational system the library also includes a "scrollToId()" function:
-```
-export const scrollToId = (elementId: string, smooth?: boolean) => {...}
-```
-```
-<a onClick={() => scrollToId("someId", true)} >Scroll to ID </a>
-<button onClick={() => scrollToId("someId", true)} >Scroll to ID </button>
 ```

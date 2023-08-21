@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import SwipingHeader from "./SwipingHeader"
+import {SwipingHeader} from "./SwipingHeader"
 import {scrollToId} from "./scrollToIdUtil";
 
 const meta: Meta<typeof SwipingHeader> = {
@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof SwipingHeader>;
 
-export const Primary: Story = (args) => (
+export const Primary: Story = (args: any) => (
   <SwipingHeader data-testId="InputField-id" {...args} />
 );
 Primary.args = {
@@ -20,7 +20,7 @@ Primary.args = {
   headercomponent: <div style={{backgroundColor: "cyan", height: "100%", width: "100%"}}>Header Component</div>
 };
 
-export const ScrollToUtil: Story = (args) => (
+export const ScrollToUtil: Story = (args: any) => (
   <SwipingHeader data-testId="InputField-id" {...args} />
 );
 ScrollToUtil.args = {
@@ -35,7 +35,7 @@ ScrollToUtil.args = {
     </div>
 };
 
-export const ScrollToUtilSmooth: Story = (args) => (
+export const ScrollToUtilSmooth: Story = (args: any) => (
   <SwipingHeader data-testId="InputField-id" {...args} />
 );
 ScrollToUtilSmooth.args = {
@@ -50,7 +50,7 @@ ScrollToUtilSmooth.args = {
     </div>
 };
 
-export const ScrollToUtilError: Story = (args) => (
+export const ScrollToUtilError: Story = (args: any) => (
   <SwipingHeader data-testId="InputField-id" {...args} />
 );
 ScrollToUtilError.args = {

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { SwipingHeaderProps } from "./swipingHeader.types";
 
 
-const SwipingHeader: React.FC<SwipingHeaderProps> = (props) => {
+export const SwipingHeader: React.FC<SwipingHeaderProps> = (props) => {
   const {bodycomponent, headercomponent} = props;
   useEffect(() => {
     // main content scroll on scroll
@@ -66,5 +66,3 @@ const SwipingHeader: React.FC<SwipingHeaderProps> = (props) => {
     </div>
   )
 }
-
-export default SwipingHeader
