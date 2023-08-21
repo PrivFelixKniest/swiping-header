@@ -2,6 +2,8 @@
 
 This npm package allows you to implement a "Swiping Header" inspired by the mobile tool bar at the top or the windows lock screen into your React appliactions with ease!
 
+![](https://raw.githubusercontent.com/PrivFelixKniest/swiping-header/master/TrafficJamExample.gif)
+
 ## Install
 
 ``` 
@@ -9,6 +11,9 @@ npm install swiping-header@latest
 ```
 
 ... to Install the latest version of the Swiping Header component library
+
+> npm repo: https://www.npmjs.com/package/swiping-header <br>
+> Github repo: https://github.com/PrivFelixKniest/swiping-header/edit/master
 
 ## Usage
 
@@ -102,6 +107,17 @@ import {scrollToId} from "swiping-header"
 
 <button onClick={() => scrollToId("someId", true)} >Scroll to ID </button>
 <button onClick={() => scrollToId("someId")} >Scroll to ID instantly</button>
+```
+
+### --scroll css variable
+
+As a sideeffect, the usage of the SwipingHeader component also injects a css variable "--scroll", which is a value between 0 and 1, referencing the percentage of the whole page that has been scrolled over so far. The variable can be used in css to trigger scroll animations or any other scroll dependant change.
+
+```
+.background {
+  transform: translateY(calc(var(--scroll) * 500px));
+  ...
+}
 ```
 
 ### --scroll css variable
