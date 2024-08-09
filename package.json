@@ -23,7 +23,7 @@
     "frontend"
   ],
   "author": "Felix Kniest",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/PrivFelixKniest/swiping-header/issues"
   },
